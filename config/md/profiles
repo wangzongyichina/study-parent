@@ -1,3 +1,0 @@
-VM options配置：-Dspring.config.location=config/app/dev/wzy-study-dev.yml
-
-Program arguments配置:-Dspring.profiles.active=local

@@ -2,5 +2,4 @@ spring:
   profiles: local
 
 server:
-  port: 10100
-
+  port: 10200
