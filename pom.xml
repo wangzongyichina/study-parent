@@ -20,9 +20,10 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>user</module>
         <module>design</module>
+        <module>other</module>
         <module>system</module>
+        <module>user</module>
     </modules>
 
     <properties>
