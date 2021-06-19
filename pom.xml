@@ -24,6 +24,8 @@
         <module>other</module>
         <module>system</module>
         <module>user</module>
+        <module>gateway</module>
+        <module>security</module>
     </modules>
 
     <properties>
@@ -36,6 +38,10 @@
 
     <dependencyManagement>
         <dependencies>
+<!--            <dependency>-->
+<!--                <groupId>org.apache.logging.log4j</groupId>-->
+<!--                <artifactId>log4j-core</artifactId>-->
+<!--            </dependency>-->
 
         </dependencies>
     </dependencyManagement>
