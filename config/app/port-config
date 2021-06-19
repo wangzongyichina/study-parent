@@ -1,0 +1,16 @@
+user
+        local-port=10100
+design
+        local-port=10200
+        dev-port=10201
+system
+        local-port=10301
+        dev-port=10302
+gateway
+        local-port=10401
+        dev-port=10302
+security
+        local-port=10501
+other
+        local-port=10900
+        dev-port=10901
