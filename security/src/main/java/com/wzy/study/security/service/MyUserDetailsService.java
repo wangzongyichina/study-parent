@@ -20,8 +20,10 @@ public class MyUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         log.error("**********************");
-
-        UserDetails userDetails = User.withUsername("王综艺").password("123").authorities("test","user").build();
+        log.info("MyUserDetailsService-loadUserByUsername");
+        log.info("this:{}", this.getClass());
+        log.info("instanceof:{}", this instanceof org.springframework.security.core.userdetails.UserDetailsService);
+        UserDetails userDetails = User.withUsername("王综艺").password("$2a$10$XEx97x/j3tJ6tTTuiabeaektRexFQvef20hxH8dvwQf3OnQZbV5Ei").authorities("test","user").build();
         return userDetails;
     }
 

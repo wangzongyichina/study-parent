@@ -15,8 +15,8 @@ public class Regex01 {
 
     @Test
     public void test01() {
-        String str1 = "v1/user/234792834/video-url";
-        boolean matches = Pattern.matches("/v1/user/[0-9]*/video-url", str1);
+        String str1 = "/v1/biz/234792834";
+        boolean matches = Pattern.matches("/v1/biz/[0-9]*", str1);
         System.out.println("matches = " + matches);
 
     }
