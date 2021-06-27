@@ -6,11 +6,11 @@
         <groupId>com.wzy.study</groupId>
         <artifactId>study-parent</artifactId>
         <version>1.0.0</version>
-        <relativePath/> <!-- lookup parent from repository -->
+<!--        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
     </parent>
     <groupId>com.wzy.study</groupId>
     <artifactId>system</artifactId>
-    <version>1.0.0</version>
+    <version>${parent.version}</version>
     <name>system</name>
     <description>系统</description>
     <properties>

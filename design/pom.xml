@@ -6,12 +6,12 @@
         <groupId>com.wzy.study</groupId>
         <artifactId>study-parent</artifactId>
         <version>1.0.0</version>
-        <relativePath/> <!-- lookup parent from repository -->
+<!--        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
     </parent>
     <groupId>com.wzy.study</groupId>
     <artifactId>design</artifactId>
-    <version>1.0.0</version>
-    <name>design-pattern</name>
+    <version>${parent.version}</version>
+    <name>design</name>
     <description>设计模式</description>
     <properties>
         <java.version>1.8</java.version>

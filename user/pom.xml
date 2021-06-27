@@ -6,10 +6,10 @@
         <groupId>com.wzy.study</groupId>
         <artifactId>study-parent</artifactId>
         <version>1.0.0</version>
-        <relativePath/>
+<!--        <relativePath/>-->
     </parent>
     <artifactId>user</artifactId>
-    <version>1.0.0</version>
+    <version>${parent.version}</version>
     <name>user</name>
     <description>用户模板</description>
     <properties>
