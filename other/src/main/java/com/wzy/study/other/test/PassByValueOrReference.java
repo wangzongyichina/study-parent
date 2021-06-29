@@ -1,6 +1,7 @@
 package com.wzy.study.other.test;
 
-import java.util.ArrayList;
+import com.wzy.study.other.bean.Person;
+
 import java.util.Arrays;
 import java.util.List;
 

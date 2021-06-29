@@ -1,4 +1,4 @@
-package com.wzy.study.other.test;
+package com.wzy.study.other.bean;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

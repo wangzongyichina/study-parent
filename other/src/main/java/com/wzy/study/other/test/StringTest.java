@@ -1,4 +1,4 @@
-package com.wzy.study.gateway.test;
+package com.wzy.study.other.test;
 
 import org.junit.Test;
 
