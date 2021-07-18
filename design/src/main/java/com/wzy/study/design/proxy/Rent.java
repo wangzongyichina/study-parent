@@ -8,6 +8,6 @@ package com.wzy.study.design.proxy;
 
 public interface Rent {
 
-    public void rent();
+    void rent();
 
 }

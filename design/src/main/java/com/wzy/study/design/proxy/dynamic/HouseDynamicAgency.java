@@ -1,4 +1,6 @@
-package com.wzy.study.design.proxy;
+package com.wzy.study.design.proxy.dynamic;
+
+import com.wzy.study.design.proxy.Rent;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -10,7 +12,7 @@ import java.lang.reflect.Proxy;
  * @Desc:
  */
 
-public class HouseAgency implements InvocationHandler {
+public class HouseDynamicAgency implements InvocationHandler {
 
     private Rent rent;
 
@@ -18,11 +20,11 @@ public class HouseAgency implements InvocationHandler {
         this.rent = rent;
     }
 
-    public HouseAgency(Rent rent) {
+    public HouseDynamicAgency(Rent rent) {
         this.rent = rent;
     }
 
-    public HouseAgency() {
+    public HouseDynamicAgency() {
     }
 
     /**
@@ -31,14 +33,18 @@ public class HouseAgency implements InvocationHandler {
      * proxyClass.getConstructor(InvocationHandler.class). newInstance(handler); 或更简单地： Foo f = (Foo)
      * Proxy.newProxyInstance(Foo.class.getClassLoader(), new Class<?>[] { Foo.class }, handler);
      */
-
+    // 生成得到代理类
     public Object getProxy() {
-        return Proxy.newProxyInstance(this.getClass().getClassLoader(), Rent.class.getInterfaces(), this);
+        return Proxy.newProxyInstance(Rent.class.getClassLoader(), Rent.class.getInterfaces(), this);
     }
 
+    // 处理代理实例，并返回结果
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        return method.invoke(rent, args);
+        System.out.println("HouseDynamicAgency-invoke");
+        System.out.println("HouseDynamicAgency-arys = " + "arys");
+        Object invoke = method.invoke(rent, args);
+        return invoke;
     }
 
 }

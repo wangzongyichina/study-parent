@@ -1,4 +1,6 @@
-package com.wzy.study.design.proxy;
+package com.wzy.study.design.proxy.dynamic;
+
+import com.wzy.study.design.proxy.Rent;
 
 /**
  * @Author: wangzongyi
@@ -6,7 +8,7 @@ package com.wzy.study.design.proxy;
  * @Desc:
  */
 
-public class HouseOwer implements Rent{
+public class HouseOwer implements Rent {
     @Override
     public void rent() {
         System.out.println("房东出租房子");

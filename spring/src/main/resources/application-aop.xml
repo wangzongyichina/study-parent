@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--配置bean-->
+    <bean id="userService" class="com.wzy.study.spring.aop.service.UserServiceImpl"></bean>
+    <bean id="afterLog" class="com.wzy.study.spring.aop.log.AfterLog"></bean>
+    <bean id="beforeLog" class="com.wzy.study.spring.aop.log.BeforeLog"></bean>
+
+    <!--AOP配置-->
+    <!--方式一-->
+<!--    <aop:config>-->
+<!--        <aop:pointcut id="userServicePointcut" expression="execution(* com.wzy.study.spring.aop.service.*.*(..))"/>-->
+<!--        <aop:advisor advice-ref="afterLog" pointcut-ref="userServicePointcut"></aop:advisor>-->
+<!--        <aop:advisor advice-ref="beforeLog"-->
+<!--                     pointcut="execution(* com.wzy.study.spring.aop.service.*.*(..))"></aop:advisor>-->
+<!--    </aop:config>-->
+
+    <!--方式二-->
+<!--    <bean id="dIYLog" class="com.wzy.study.spring.aop.log.DIYLog"></bean>-->
+<!--    <aop:config>-->
+<!--        <aop:aspect ref="dIYLog">-->
+<!--            <aop:pointcut id="userServicePointcut2" expression="execution(* com.wzy.study.spring.aop.service.*.*(..))"/>-->
+<!--            <aop:before method="after" pointcut-ref="userServicePointcut2"></aop:before>-->
+<!--        </aop:aspect>-->
+<!--    </aop:config>-->
+
+    <!--方式三-->
+    <bean id="annotationPointcut" class="com.wzy.study.spring.aop.log.AnnotationPointcut"></bean>
+    <!--开启注解支持  默认 - proxy-target-class="false"   cglib - proxy-target-class="true"  -->
+    <aop:aspectj-autoproxy proxy-target-class="false"></aop:aspectj-autoproxy>
+
+</beans>
