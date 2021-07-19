@@ -70,6 +70,30 @@ public class UserController {
         return "访问user3";
     }
 
+    @PostMapping("/user3/add")
+    private String user3_post_add() {
+        log.error("**********************");
+        log.info("logInfo-post访问user3_add");
+        return "访问user3_add";
+    }
+
+
+    @PostMapping("/user3/{id}/reject")
+    private String user4_post(@PathVariable int id) {
+        log.error("**********************");
+        log.info("logInfo-post访问user4_id:{}", id);
+        return "访问user4";
+    }
+
+    @PostMapping("/user3/{id}/reject/{id2}")
+    private String user4_post(@PathVariable("id") int id,
+                              @PathVariable("id2") int id2) {
+        log.error("**********************");
+        log.info("logInfo-post访问user4,id:{},id2:{}", id, id2);
+        return "访问user4-1";
+    }
+
+
     @GetMapping("/detail")
     private String userDetail() {
         log.error("**********************");
