@@ -12,6 +12,7 @@ public enum SexEnum implements CodeEnum {
     SexEnum(Integer code,String description){
         this.code=code;
         this.description=description;
+        // 测试
     }
 
 
