@@ -7,20 +7,11 @@ import java.lang.annotation.Target;
 
 /**
  * @Author: wangzongyi
- * @Data: 2021/3/13 18:00
+ * @Data: 2021/9/12 0:33
  * @Desc:
  */
-
-public class Test03 {
-
-    @MyAnnotation03(name = "wangzongyi",schools = {"湖南农业大学"})
-    public void test03(){
-
-    }
-    @MyAnnotation04(name = 23)
-    public void test01(){
-
-    }
-
+@Target(value = ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
+@interface MyAnnotation04 {
+    int name();
 }
-
