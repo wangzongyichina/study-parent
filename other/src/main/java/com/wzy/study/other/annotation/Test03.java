@@ -13,14 +13,16 @@ import java.lang.annotation.Target;
 
 public class Test03 {
 
-    @MyAnnotation03(name = "wangzongyi",schools = {"湖南农业大学"})
-    public void test03(){
+    @MyAnnotation03(name = "wangzongyi", age = 10, schools = {
+        "湖南农业大学"
+    })
+    public void test03() {
 
     }
+
     @MyAnnotation04(name = 23)
-    public void test01(){
+    public void test01() {
 
     }
 
 }
-
