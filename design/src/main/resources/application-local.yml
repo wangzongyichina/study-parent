@@ -1,5 +1,17 @@
 spring:
   profiles: local
+  application:
+    name: wzy-study-design
 
 server:
   port: 10200
+
+# eureka配置，服务注册到哪里（eureka注册中心的配置）
+eureka:
+  instance:
+    hostname: localhost
+  port: 10000
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.port}/eureka/
+

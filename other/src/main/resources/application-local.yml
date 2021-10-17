@@ -1,5 +1,7 @@
 spring:
   profiles: local
+  application:
+    name: wzy-study-other
 
 server:
   port: 10900

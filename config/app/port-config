@@ -1,3 +1,6 @@
+eureka
+        local-port=10000
+
 user
         local-port=10100
 design

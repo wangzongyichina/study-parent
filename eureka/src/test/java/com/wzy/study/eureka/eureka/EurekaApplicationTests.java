@@ -1,10 +1,10 @@
-package com.wzy.study.design;
+package com.wzy.study.eureka.eureka;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DesignPatternApplicationTests {
+class EurekaApplicationTests {
 
     @Test
     void contextLoads() {
