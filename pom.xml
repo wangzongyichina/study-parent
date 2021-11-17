@@ -14,7 +14,7 @@
 
     <groupId>com.wzy.study</groupId>
     <artifactId>study-parent</artifactId>
-    <version>${parent.version}</version>
+    <version>1.0.0</version>
 
     <name>study-parent</name>
     <description>study-parent父子模块项目</description>
@@ -41,8 +41,10 @@
         <springcloud.version>Hoxton.SR8</springcloud.version>
         <springboot.version>2.2.6.RELEASE</springboot.version>
         <lombok.version>1.18.20</lombok.version>
-        <log4j.version>2.13.3</log4j.version>
-        <junit.version>4.13.2</junit.version>
+        <apache.log4j.version>2.13.3</apache.log4j.version>
+        <log4j.version>1.2.17</log4j.version>
+        <slf4j.version>1.7.30</slf4j.version>
+        <junit.version>4.13</junit.version>
         <hutool.version>5.7.9</hutool.version>
         <guava.version>30.1-jre</guava.version>
         <commons-lang3.version>3.12.0</commons-lang3.version>
@@ -84,7 +86,19 @@
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j</artifactId>
+                <version>${apache.log4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
                 <version>${log4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
             </dependency>
 
             <dependency>
