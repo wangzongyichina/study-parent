@@ -1,4 +1,4 @@
-package com.wzy.study.design.prototype;
+package com.wzy.study.design.pattern.prototype;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

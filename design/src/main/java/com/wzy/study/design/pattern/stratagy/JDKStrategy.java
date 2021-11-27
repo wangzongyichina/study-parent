@@ -1,4 +1,4 @@
-package com.wzy.study.design.stratagy;
+package com.wzy.study.design.pattern.stratagy;
 
 import java.util.Arrays;
 

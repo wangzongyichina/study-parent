@@ -1,4 +1,4 @@
-package com.wzy.study.design.prototype;
+package com.wzy.study.design.pattern.prototype;
 
 /**
  * @Author: wangzongyi

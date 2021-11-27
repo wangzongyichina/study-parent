@@ -1,4 +1,4 @@
-package com.wzy.study.design.adapt;
+package com.wzy.study.design.pattern.adapt;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
@@ -23,7 +23,7 @@ import java.util.Map;
 /**
  * @Author: wangzongyi
  * @Data: 2021/10/30 17:44
- * @Desc:
+ * @Desc: 适配器模式 源码 Dispatcher
  */
 
 public class JDKAdapt {

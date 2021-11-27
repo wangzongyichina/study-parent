@@ -1,4 +1,4 @@
-package com.wzy.study.design.factory;
+package com.wzy.study.design.pattern.factory;
 
 import java.util.Calendar;
 

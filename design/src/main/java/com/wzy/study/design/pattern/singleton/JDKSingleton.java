@@ -1,4 +1,4 @@
-package com.wzy.study.design.singleton;
+package com.wzy.study.design.pattern.singleton;
 
 import java.util.Calendar;
 
