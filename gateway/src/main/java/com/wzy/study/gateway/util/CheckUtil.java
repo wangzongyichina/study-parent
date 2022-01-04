@@ -1,8 +1,7 @@
 package com.wzy.study.gateway.util;
 
-import com.wzy.study.gateway.exception.CheckException;
+import com.wzy.study.gateway.exception1.CheckException;
 
-import java.util.List;
 import java.util.stream.Stream;
 
 /**

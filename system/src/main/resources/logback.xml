@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <!--
+         配置文件通用属性:通用属性是为了其他配置方便引用
+           <property name="" value=""></property>
+           通用属性是为了其他配置方便引用,
+           通过以 ${name} 的形式，方便取得value值
+    -->
+    <!--
+        日志输出相关格式
+        %-10level 级别，10个字符，左对齐
+        %d{yyyy-MM-dd HH:mm:ss.SSS} 日期
+        %c      当前类全限定名
+        %M      当前执行方法
+        %L      行号
+        %thread      线程名称
+        %m 或 %msg      信息
+        %n      换行
+    -->
+
+    <property name="pattern" value="[%-6level] %d{yyyy-MM-dd HH:mm:ss.SSS} %c %M %L %thread %m %n"></property>
+
+    <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <!--
+               表示对日志的输出目标配置
+               默认是 System.out  黑色字体
+               设置   System.err  红色字体
+               -->
+        <target>
+            System.err
+        </target>
+        <!--        配置日志输出格式，引用前面的通用配置属性-->
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${pattern}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="fileAppender" class="ch.qos.logback.core.FileAppender">
+        <file>D:\Study\Log\logback.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${pattern}</pattern>
+        </encoder>
+    </appender>
+
+    <root level="ALL">
+        <appender-ref ref="consoleAppender"></appender-ref>
+        <appender-ref ref="fileAppender"></appender-ref>
+    </root>
+
+
+</configuration>

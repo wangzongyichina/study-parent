@@ -11,6 +11,11 @@
     <bean id="afterLog" class="com.wzy.study.spring.aop.log.AfterLog"></bean>
     <bean id="beforeLog" class="com.wzy.study.spring.aop.log.BeforeLog"></bean>
 
+    <bean id="person" class="com.wzy.study.spring.bean.Person" scope="singleton">
+        <property name="name" value="小红"></property>
+        <property name="age" value="12"></property>
+    </bean>
+
     <!--AOP配置-->
     <!--方式一-->
 <!--    <aop:config>-->
