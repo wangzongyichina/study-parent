@@ -3,7 +3,7 @@ package com.wzy.study.design.pattern.facade;
 /**
  * @Author: wangzongyi
  * @Data: 2021/11/25 20:54
- * @Desc:
+ * @Desc: 外观模式源码
  */
 
 public class JDKFacade {
