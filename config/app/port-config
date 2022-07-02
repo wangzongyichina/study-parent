@@ -3,17 +3,25 @@ eureka
 
 user
         local-port=10100
+
+mybatis-plus
+        local-port=10110
+
 design
         local-port=10200
         dev-port=10201
+
 system
         local-port=10301
         dev-port=10302
+
 gateway
         local-port=10401
-        dev-port=10302
+        dev-port=10402
+
 security
         local-port=10501
+
 other
         local-port=10900
         dev-port=10901
