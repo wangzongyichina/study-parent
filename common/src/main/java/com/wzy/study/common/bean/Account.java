@@ -1,8 +1,10 @@
-package com.wzy.study.user.bean;
+package com.wzy.study.common.bean;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.Date;
 
 /**
  * @Author: wangzongyi
@@ -15,12 +17,26 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Account {
 
+    private Long id;
+
     private String name;
+
+    private String displayName;
+
+    private String phone;
+
+    private String idNo;
 
     private Integer age;
 
     private char sex;
 
     private String address;
+
+    private Date createTime;
+
+    private Date modifyTime;
+
+    private int deleted;
 
 }
