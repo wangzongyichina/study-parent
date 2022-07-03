@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wzy.study.user.mapper.User0Mapper">
+
+    <insert id="insertUser0" parameterType="com.wzy.study.user.bean.User0">
+        insert into t_user0 (id, name, age, email, create_time, modify_time)
+        values (#{id},
+                #{name},
+                #{age},
+                #{email},
+                #{createTime},
+                #{modifyTime})
+
+    </insert>
+
+    <select id="getUser0" resultType="com.wzy.study.user.bean.User0">
+        select id, name, age, email, create_time, modify_time from t_user0
+            where id = #{id}
+    </select>
+
+    <select id="getUser0List" resultType="com.wzy.study.user.bean.User0">
+        select id, name, age, email, create_time, modify_time from t_user0
+    </select>
+
+</mapper>

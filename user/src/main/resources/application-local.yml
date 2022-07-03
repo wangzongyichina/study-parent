@@ -1,17 +1,34 @@
-spring:
-  profiles: local
-  application:
-    name: wzy-study-user
-
 server:
   port: 10100
 
 # eureka配置，服务注册到哪里（eureka注册中心的配置）
-eureka:
-  instance:
-    hostname: localhost
-  port: 10000
-  client:
-    service-url:
-      defaultZone: http://${eureka.instance.hostname}:${eureka.port}/eureka/
+#eureka:
+#  instance:
+#    hostname: localhost
+#  port: 10000
+#  client:
+#    service-url:
+#      defaultZone: http://${eureka.instance.hostname}:${eureka.port}/eureka/
 
+spring:
+  profiles: local
+  application:
+    name: wzy-study-user
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: 123456@
+    url: jdbc:mysql://192.168.1.102:3306/mybatis-plus?serverTimezone=UTC&useUnicode=true$characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  type-aliases-package: com.wzy.study.user
+  type-handlers-package:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/**.xml
+
+logging:
+  level:
+    root: info
+    com.wzy.study.user.mapper.User0Mapper: debug
