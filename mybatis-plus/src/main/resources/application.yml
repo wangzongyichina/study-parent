@@ -1,0 +1,29 @@
+server:
+  port: 10110
+
+#spring:
+#  datasource:
+#    username: root
+#    password: 123456@
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://120.24.50.213:3306/study-user?serverTimezone=GMT%2B8&useUnicode=true$characterEncoding=UTF-8
+#    type: com.alibaba.druid.pool.DruidDataSource
+
+spring:
+  datasource:
+    username: root
+    password: 123456@
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.1.102:3306/mybatis-plus?serverTimezone=GMT%2B8&useUnicode=true$characterEncoding=UTF-8
+    type: com.alibaba.druid.pool.DruidDataSource
+
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath*:mapper/*.xml
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
