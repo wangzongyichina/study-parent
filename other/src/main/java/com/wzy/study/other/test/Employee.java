@@ -1,16 +1,14 @@
 package com.wzy.study.other.test;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
-
-/**
- * @Author: wangzongyi
- * @Date: 2022/7/31 16:51
- * @Desc:
- */
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Employee {
     private String name;
+    private char sex;
     private Integer age;
-    private Double salary;
 }

@@ -1,28 +1,29 @@
 package com.wzy.study.other.test;
 
-import org.junit.Test;
-
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
-/**
- * @Author: wangzongyi
- * @Date: 2022/7/31 16:51
- * @Desc:
- */
-
 public class StreamTest {
+    public static void main(String[] args) {
+        Employee e1 = new Employee("tom", 'm', 12);
+        Employee e2 = new Employee("tom2", 'm', 14);
+        Employee e3 = new Employee("tom3", 'm', 14);
+        Employee e4 = new Employee("tom4", 'm', 10);
+        Employee e7 = new Employee("tom7", 'm', 29);
+        Employee e5 = new Employee("tom5", 'm', 19);
+        Employee e6 = new Employee("tom6", 'm', 20);
+        Employee w = Arrays.asList(e1, e2, e3, e4, e5, e6, e7).stream().filter(s -> Objects.equals('m', s.getSex())).max(Comparator.comparing(Employee::getAge)).orElse(null);
+        if (Objects.isNull(w)){
 
-    @Test
-    public void test1(){
-        List<Employee> employees = new ArrayList<>();
-        double v = employees.stream().mapToDouble(Employee::getSalary).average().orElse(-1);
-        double v1 = employees.stream().collect(Collectors.averagingDouble(Employee::getSalary));
-        System.out.println("v = " + v);
-        System.out.println("v1 = " + v1);
-        Employee employee = employees.stream().collect(Collectors.maxBy(Comparator.comparing(Employee::getAge))).orElse(null);
+        }
+
+        System.out.println("w = " + w);
+        System.out.println(Objects.isNull(w));
+//        System.out.println(w.getAge());
+//        System.out.println("w = " + w);
 
     }
 }
