@@ -10,8 +10,9 @@ package com.wzy.study.other.annotation;
 public class Test {
 
     @TestAnnotation
+    @org.junit.Test
     public void test(){
-
+        MyContext01 myContext01 = new MyContext01(MyAnnotaConfig01.class);
     }
 
 }
